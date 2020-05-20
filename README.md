@@ -12,7 +12,7 @@ This repository forms a template for preparing documents and making personal
 notes using LaTeX, which let's us generate high-quality documents that include
 lots of mathematical scripts. Moreover, most journals expect your submission to
 be in LaTeX, so maintaining notes in LaTeX throughout the course of a research
-project helps make publication more seamless.
+project helps make publication easier.
 
 To that end, this repository forms a template of some defaults I like to use
 for maintaining personal notes. It uses the [ACM's Master Article
