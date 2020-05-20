@@ -9,7 +9,7 @@ code on GitHub [here](https://github.com/borisveytsman/acmart).
 ## About
 
 This repository forms a template for preparing documents and making personal
-notes using LaTeX. LaTeX let's us generate high-quality documents that include
+notes using LaTeX, which let's us generate high-quality documents that include
 lots of mathematical scripts. Moreover, most journals expect your submission to
 be in LaTeX, so maintaining notes in LaTeX throughout the course of a research
 project helps make publication more seamless.
