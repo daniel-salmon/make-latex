@@ -1,4 +1,4 @@
-# make-latex
+# make-paper
 Tools for making documents in LaTeX.
 
 It uses [ACM's Master Article

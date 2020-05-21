@@ -7,7 +7,6 @@ paper:
 		-v ${CURDIR}/output:/home/output \
 		make-latex:latest
 	cp output/paper.pdf .
-	$(MAKE) clean
 
 native-paper:
 	$(MAKE) run
@@ -19,4 +18,4 @@ run:
 	cd src; pdflatex -output-directory ../output paper.tex
 
 clean:
-	rm -f output/*
+	sudo rm -f output/*
