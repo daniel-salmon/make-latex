@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Copy the mounted source files into a distinct src/ folder in which we have other
+# LaTeX class and style files. This allows us to mount the src/ directory on the host
+# without having to worry about persisting any LaTeX package files that may exist
+# in the container (but which we don't really want committed or clogging up our host's
+# filesystem)
+cp -r cp-src/* src/
+
+# Move into the src/ folder to begin execution
+cd src
+
+# Build the PDF from source files
+# Do this twice to ensure all cross-references get properly linked
+pdflatex -output-directory ../output paper.tex
+pdflatex -output-directory ../output paper.tex

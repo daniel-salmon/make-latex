@@ -13,7 +13,11 @@
 \date{\today}
 
 \begin{abstract}
-	This repository provides a template for creating personal manuscripts and notes in \LaTeX. This makes it easier to compile well-formatted notes and to prepare papers for journal submission. The basic template uses \href{https://www.acm.org/publications/proceedings-template}{ACM's Master Article Template} for formatting rules.
+This repository provides a template for creating personal manuscripts
+and notes in \LaTeX. This makes it easier to compile well-formatted notes and
+to prepare papers for journal submission. The basic template uses
+\href{https://www.acm.org/publications/proceedings-template}{ACM's Master
+Article Template} for formatting rules.
 \end{abstract}
 
 \maketitle
@@ -32,5 +36,35 @@ woot-woot
 \label{sec:sup}
 
 sup
+
+\section{Formula's with $\pi$}
+
+The first formula for $\pi$ I encountered used the Taylor expansion of the
+$\arctan$ function evaluated at $\frac{\pi}{4}$:
+\begin{equation}\label{pi4}
+	\pi=4\sum_{n=0}^{\infty}\frac{(-1)^{n}}{2n + 1}.
+\end{equation}
+
+Not long after that encounter, I came across the Basel series which is even
+more surprising:
+\begin{equation}\label{basel}
+	\sum_{n=1}^{\infty}\frac{1}{n^2}=\frac{\pi^2}{6}.
+\end{equation}
+
+To me, the only \emph{unsuprising} thing about the Basel series is that Euler
+figured it out (in the first half of the eighteenth century at that). Although
+proving \eqref{pi4} is relatively straightforward after some exposure to
+calculus, it wasn't until I took a course in complex variables that I learned
+the technology needed to give a proof of \eqref{basel}. Note that there are
+other ways to prove \eqref{basel}, this is just a demonstration of the way I
+first learned how to prove it.
+
+If you let $C(z)=\pi\cot{\pi z}$ and put $f(z)=\frac{1}{z^2}$, then you can show that
+\begin{equation}
+	\int_{\gamma_k}f(z)C(z)dz \rightarrow 0
+\end{equation}
+in the limit as $k \rightarrow \infty$, where $k \in \mathbb{N}$ and the curve
+$\gamma_k$ is a square with vertices at $\pm(k+\frac{1}{2})\pm
+i(k+\frac{1}{2})$. Applying the Residue Theorem then gives you \eqref{basel}.
 
 \end{document}

@@ -1,2 +1,8 @@
 # Vim swap files
 *.swp
+
+# Tarballs
+*.tar.gz
+
+# Output directory
+output/
