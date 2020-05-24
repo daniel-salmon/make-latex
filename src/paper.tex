@@ -1,5 +1,8 @@
 \documentclass[manuscript,screen,nonacm]{acmart}
 
+% Import the physics package which makes it easy to write bras and kets
+\usepackage{physics}
+
 \begin{document}
 
 \title{Make Paper}
@@ -33,6 +36,7 @@ Article Template} for formatting rules.
 woot-woot
 
 \section{Formula's with $\pi$}
+\label{sec:formulas-pi}
 
 The first formula for $\pi$ I encountered used the Taylor expansion of the
 $\arctan$ function evaluated at $\frac{\pi}{4}$:
@@ -61,5 +65,38 @@ If you let $C(z)=\pi\cot{\pi z}$ and put $f(z)=\frac{1}{z^2}$, then you can show
 in the limit as $k \rightarrow \infty$, where $k \in \mathbb{N}$ and the curve
 $\gamma_k$ is a square with vertices at $\pm(k+\frac{1}{2})\pm
 i(k+\frac{1}{2})$. Applying the Residue Theorem then gives you \eqref{basel}.
+
+\section{Witten on Feynman's $i\varepsilon$ Prescription in String Theory}
+
+I wish I could say I understoond Ed Witten's \emph{The Feynman $i\varepsilon$
+in String Theory} \cite{witten2013feynman}, but alas string theory is beyond
+me. Perhaps if I find the time soonish I'll write up an analysis of how the
+$i\varepsilon$ arises in scalar quantum field theory\footnote{The result is
+more general than the case of scalar quantum field theories, but the way I
+remember seeing it is through deriving the Feynman rules for scalar quantum
+field theory.}. It's been quite a time since I've done any QFT calculations,
+but the way I remember proceeding is starting from the two-point correlation
+function\cite{Peskin:1995ev}
+\begin{equation}
+	\bra{\Omega}T\phi(x_1)\phi(x_2)\ket{\Omega}
+	= \lim_{T\rightarrow \infty(1-i\varepsilon)}\frac{
+		\int\mathcal{D}\phi \: \phi(x_1)\phi(x_2)\exp[i\int_{-T}^{T}d^4x\mathcal{L}]}{
+		\int\mathcal{D}\phi \: \exp[i\int_{-T}^{T}d^4x\mathcal{L}]
+	}.
+\end{equation}
+Note that here $\mathcal{D}\phi$ is a measure for a functional integral. We can
+already see some hints as to where we'll pick up an $i\varepsilon$ in our
+propagator by looking at the limit for large time. Fair enough, but that
+doesn't explain why we do that\ldots again maybe in the future I'll revist this
+some more. At some point you'll need to invoke
+\begin{equation}
+	\int dx \exp[-kx^2] = \sqrt{\frac{\pi}{k}},
+\end{equation}
+which is pretty much the only integral you ever need to remember. This is known
+as a Gaussian integral and could probably get discussed in Section
+\ref{sec:formulas-pi}.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{bibliography}
 
 \end{document}

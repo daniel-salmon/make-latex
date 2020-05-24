@@ -11,6 +11,14 @@ cp -r cp-src/* src/
 cd src
 
 # Build the PDF from source files
-# Do this twice to ensure all cross-references get properly linked
-pdflatex -output-directory ../output paper.tex
-pdflatex -output-directory ../output paper.tex
+# First run pdflatex to generate the base and aux files
+# Create the bibliography
+# Run pdflatex again to include the bibliography
+# Do this one more time to ensure all cross-references get properly linked
+pdflatex paper
+bibtex paper
+pdflatex paper
+pdflatex paper
+
+# Copy all collateral to the output folder
+cp * ../output
