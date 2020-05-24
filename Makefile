@@ -1,11 +1,11 @@
 build:
-	docker build -t make-latex:latest .
+	docker build -t make-paper:latest .
 
 paper:
 	docker run --rm \
 		-v ${CURDIR}/src:/home/cp-src \
 		-v ${CURDIR}/output:/home/output \
-		make-latex:latest
+		make-paper:latest
 	cp output/paper.pdf .
 
 native-paper:
